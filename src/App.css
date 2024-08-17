@@ -1,42 +1,181 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.form-container {
+  width: 650px;
+  padding: 30px;
+  background-color: var(--White);
+  border-radius: 15px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group {
+  width: 100%;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.name-inputs input {
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+  border: 1px solid var(--Grey-500);
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):hover, textarea:hover {
+  border: 1px solid var(--Green-600);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus, textarea:focus {
+  outline: 1px solid var(--Green-600);
+}
+
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  margin: 8px 0;
+  border: 1px solid var(--Grey-500);
+  cursor: pointer;
+}
+
+#query {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.query-type {
+  border: 1px solid var(--Grey-500);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.query-type label, .query-type input, .query-type {
+  cursor: pointer;
+}
+
+input[type=radio]{
+  accent-color: var(--Green-600);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-weight: bold;
+  color: var(--White);
+  background-color: var(--Green-600);
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 1px solid var(--Grey-900);
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Green-600);
+}
+
+.checkbox > div {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  accent-color: var(--Green-600);
+  width: 15px;
+}
+
+span.error {
+  font-size: 14px;
+  display: block;
+  color: var(--Red);
+}
+
+span.hidden {
+  display: none;
+}
+
+.radio-selected {
+  background-color: var(--Green-200);
+  border: 1px solid var(--Green-600);
+}
+
+.star {
+  color: var(--Green-600);
+}
+
+.toast {
+  position: fixed;
+  top: 30px;
+  width: 400px;
+  background-color: var(--Grey-900);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--White);
+  font-size: 14px;
+  transition: all 1s linear;
+}
+
+.toast > div {
+  display: flex;
+  align-items:  center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toast img {
+  width: 14px;
+}
+
+.toast span {
+  font-weight: bold;
+}
+
+.toast.hidden {
+  transform: translateY(-400px);
+}
+
+@media screen and (max-width: 400px) {
+  .form-container {
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .name-inputs {
+    flex-wrap: wrap;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  #query {
+    flex-wrap: wrap;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .toast {
+    width: 300px;
+  }
 }
