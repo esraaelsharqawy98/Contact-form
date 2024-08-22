@@ -56,9 +56,9 @@ function App() {
     const isValid = await formValidation();
     if (isValid) {
       setToastVisible(true);
-      // setTimeout(() => {
-      //   setToastVisible(false);
-      // }, 3000);
+      setTimeout(() => {
+        setToastVisible(false);
+      }, 3000);
       setFormData({
         firstname: "",
         lastname: "",
