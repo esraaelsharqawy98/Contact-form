@@ -3,6 +3,7 @@
   padding: 30px;
   background-color: var(--White);
   border-radius: 15px;
+  margin: 0 2rem;
 }
 
 .form {
@@ -35,6 +36,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
   border-radius: 5px;
   margin: 8px 0;
   width: 100%;
+  height: 45px;
   cursor: pointer;
 }
 
@@ -66,9 +68,11 @@ textarea {
 .query-type {
   border: 1px solid var(--Grey-500);
   width: 100%;
+  height: 45px;
   padding: 10px 20px;
   border-radius: 5px;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -81,7 +85,7 @@ input[type=radio]{
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
@@ -91,18 +95,18 @@ button {
   background-color: var(--Green-600);
   padding: 15px 0;
   border-radius: 5px;
-  border: 1px solid var(--Grey-900);
+  border: none;
   margin-top: 8px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: var(--Green-600);
+  background-color: hsl(169, 82%, 20%);
 }
 
 .checkbox > div {
   display: flex;
-  margin-bottom: 8px;
+  margin: 10px 0;
   gap: 10px;
   align-items: center;
 }
@@ -114,12 +118,7 @@ input[type=checkbox] {
 
 span.error {
   font-size: 14px;
-  display: block;
   color: var(--Red);
-}
-
-span.hidden {
-  display: none;
 }
 
 .radio-selected {
@@ -161,21 +160,35 @@ span.hidden {
 .toast.hidden {
   transform: translateY(-400px);
 }
-
+@media screen and (min-width: 1441px) {
+  .toast {
+      top: 7%;
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  .toast {
+    width: 300px;
+  }
+}
 @media screen and (max-width: 400px) {
   .form-container {
     width: 300px;
+    margin: 0;
+  }
+  h1{
+    font-size:30px;
   }
 
   .name-inputs {
     flex-wrap: wrap;
   }
+  textarea{
+    height: 120px;
+  }
 
   #query {
     flex-wrap: wrap;
   }
-
-  .toast {
-    width: 300px;
-  }
+  
 }
