@@ -94,7 +94,7 @@ function App() {
       </div>
       <div className="form-container">
         <h1>Contact Us</h1>
-        <form className="form" onSubmit={handleOnsubmitForm}>
+        <form className="form" onSubmit={handleOnsubmitForm} noValidate>
           <div className="name-inputs">
             <div className="form-group">
               <label htmlFor="first-name">
@@ -132,7 +132,7 @@ function App() {
               Email Address <span className="star">*</span>
             </label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               value={formData.email}
